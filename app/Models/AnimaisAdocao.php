@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class AnimaisAdocao extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'nome',
+        'raca',
+        'data_nascimento',
+        'sexo',
+        'estado_cod',
+        'cidade_cod',
+        'imagem',
+        'descricao'
+    ];
+
 }

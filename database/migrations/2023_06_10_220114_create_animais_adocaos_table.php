@@ -23,6 +23,11 @@ class CreateAnimaisAdocaosTable extends Migration
             $table->string('nome');
             $table->string('raca');
             $table->dateTime('data_nascimento');
+            $table->string('sexo');
+            $table->string('estado_cod');
+            $table->string('cidade_cod');
+            $table->longText("imagem")->nullable();
+            $table->string("descricao");
             $table->timestamps();
         });
     }

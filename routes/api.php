@@ -20,7 +20,8 @@ Route::get('teste', [AuthController::class, 'teste']);
 
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
-Route::resource('animais-adocao', AnimalAdocaoController::class);
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('logout', [AuthController::class, 'logout']);
+    Route::resource('animais-adocao', AnimalAdocaoController::class);
+
 });

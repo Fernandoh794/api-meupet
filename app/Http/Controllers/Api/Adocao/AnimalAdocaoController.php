@@ -11,7 +11,8 @@ class AnimalAdocaoController extends Controller
 {
 
     public function index(Request $request){
-
+        $animais = AnimaisAdocao::all();
+        return response()->json($animais, 200);
     }
 
     public function store(Request $request){

@@ -13,7 +13,6 @@ class AnimalAdocaoResource extends JsonResource {
     public function toArray($request)
     {
 
-        $serviceIbge = new IbgeServices();
         return [
             "id" => $this->id,
             "usuario" => $this->user->name,
@@ -21,8 +20,8 @@ class AnimalAdocaoResource extends JsonResource {
             "raca" => $this->raca,
             "idade" => $this->idade,
             "sexo" => SexoAnimalEnum::getDescription($this->sexo),
-            "estado" => $serviceIbge->getEstadoById(11)['nome'],
-            "cidade" => $serviceIbge->getCidadeById(1100023)['nome'],
+            "estado" => $this->estado_cod,
+            "cidade" => $this->cidade_cod,
             "imagem" => $this->imagem,
             "descricao" => $this->descricao,
             "created_at" => $this->created_at,

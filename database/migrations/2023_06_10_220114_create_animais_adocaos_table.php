@@ -22,7 +22,7 @@ class CreateAnimaisAdocaosTable extends Migration
             	->onDelete('cascade');
             $table->string('nome');
             $table->string('raca');
-            $table->dateTime('data_nascimento');
+            $table->string('idade');
             $table->string('sexo');
             $table->string('estado_cod');
             $table->string('cidade_cod');

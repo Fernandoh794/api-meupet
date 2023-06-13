@@ -13,7 +13,7 @@ class AnimaisAdocao extends Model
         'user_id',
         'nome',
         'raca',
-        'data_nascimento',
+        'idade',
         'sexo',
         'estado_cod',
         'cidade_cod',

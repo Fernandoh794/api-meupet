@@ -14,9 +14,14 @@ use Illuminate\Support\Facades\DB;
 class AnimalAdocaoController extends Controller
 {
 
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     */
     public function index(Request $request){
         $animais = AnimaisAdocao::all();
-        return response()->json($animais, 200);
+        $resouce = AnimalAdocaoResource::collection($animais);
+        return response()->json($resouce, 200);
     }
 
 

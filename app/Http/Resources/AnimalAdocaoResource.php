@@ -19,7 +19,7 @@ class AnimalAdocaoResource extends JsonResource {
             "usuario" => $this->user->name,
             "nome" => $this->nome,
             "raca" => $this->raca,
-            "data_nascimento" => $this->data_nascimento,
+            "idade" => $this->idade,
             "sexo" => SexoAnimalEnum::getDescription($this->sexo),
             "estado" => $serviceIbge->getEstadoById(11)['nome'],
             "cidade" => $serviceIbge->getCidadeById(1100023)['nome'],

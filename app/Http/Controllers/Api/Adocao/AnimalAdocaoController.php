@@ -20,6 +20,11 @@ class AnimalAdocaoController extends Controller
      */
     public function index(Request $request){
         $animais = AnimaisAdocao::all();
+        if($request->has('cidade_cod')){
+            $animais = $animais->where('cidade_cod', $request->cidade_cod);
+        }
+
+
         $resouce = AnimalAdocaoResource::collection($animais);
         return response()->json($resouce, 200);
     }

@@ -13,6 +13,13 @@ class UserController extends Controller
     }
 
     public function update(Request $request, User $user){
+        if ($request->has('password')){
+            $request->merge([
+                'password' => bcrypt($request->password)
+            ]);
+        }
+
+
         $user->update($request->all());
         return response()->json($user);
     }

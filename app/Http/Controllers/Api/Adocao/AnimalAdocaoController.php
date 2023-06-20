@@ -23,8 +23,9 @@ class AnimalAdocaoController extends Controller
         if($request->has('cidade_cod')){
             $animais = $animais->where('cidade_cod', $request->cidade_cod);
         }
-
-
+        if ($request->has('user_id')){
+            $animais = $animais->where('user_id', $request->user_id);
+        }
         $resouce = AnimalAdocaoResource::collection($animais);
         return response()->json($resouce, 200);
     }

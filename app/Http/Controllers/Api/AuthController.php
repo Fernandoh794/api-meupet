@@ -27,6 +27,8 @@ class AuthController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'telefone' => $request->telefone,
+
         ]);
 
         return response()->json(['message' => 'Usuário registrado com sucesso'], 201);
@@ -57,11 +59,5 @@ class AuthController extends Controller
         return response()->json(['message' => 'Logout realizado com sucesso']);
     }
 
-
-
-    public function teste(){
-        $teste = new \App\Services\IbgeServices();
-        dd($teste->getAllEstados());
-    }
 
 }

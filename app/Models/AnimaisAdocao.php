@@ -18,7 +18,8 @@ class AnimaisAdocao extends Model
         'estado_cod',
         'cidade_cod',
         'imagem',
-        'descricao'
+        'descricao',
+        'status'
     ];
 
 

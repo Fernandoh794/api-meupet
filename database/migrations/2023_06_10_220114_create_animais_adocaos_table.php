@@ -28,6 +28,7 @@ class CreateAnimaisAdocaosTable extends Migration
             $table->string('cidade_cod');
             $table->longText("imagem")->nullable();
             $table->string("descricao");
+            $table->tinyInteger("status")->default(1);
             $table->timestamps();
         });
     }

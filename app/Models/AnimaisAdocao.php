@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Http\Enum\StatusAdicaoAnimalEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -20,6 +21,10 @@ class AnimaisAdocao extends Model
         'imagem',
         'descricao',
         'status'
+    ];
+
+    protected $casts = [
+        'status' => StatusAdicaoAnimalEnum::class
     ];
 
 

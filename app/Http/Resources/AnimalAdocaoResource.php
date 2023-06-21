@@ -26,7 +26,8 @@ class AnimalAdocaoResource extends JsonResource {
             "descricao" => $this->descricao,
             "created_at" => $this->created_at,
             "updated_at" => $this->updated_at,
-            "status" => $this->status
+            "status" => $this->status,
+            "userInteressado" => $this->userInteressado->name ?? "",
         ];
     }
 

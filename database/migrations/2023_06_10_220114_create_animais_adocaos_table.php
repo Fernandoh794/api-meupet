@@ -15,7 +15,7 @@ class CreateAnimaisAdocaosTable extends Migration
     {
         Schema::create('animais_adocaos', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');http://127.0.0.1:8000/api/users
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
             	->references('id')
             	->on('users')
@@ -29,6 +29,11 @@ class CreateAnimaisAdocaosTable extends Migration
             $table->longText("imagem")->nullable();
             $table->string("descricao");
             $table->tinyInteger("status")->default(1);
+            $table->unsignedBigInteger('user_id_interessado');
+            $table->foreign('user_id_interessado')
+            	->references('id')
+            	->on('users')
+            	->onDelete('cascade');
             $table->timestamps();
         });
     }

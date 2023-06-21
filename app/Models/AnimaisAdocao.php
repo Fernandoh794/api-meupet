@@ -26,4 +26,10 @@ class AnimaisAdocao extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function userInteressado(){
+        return $this->belongsTo(User::class, 'user_id_interessado');
+    }
+
+
+
 }

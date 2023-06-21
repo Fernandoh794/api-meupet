@@ -19,7 +19,9 @@ class AnimaisAdocao extends Model
         'cidade_cod',
         'imagem',
         'descricao',
-        'status'
+        'status',
+        'user_id_interessado',
+        'observacao_interessado'
     ];
 
     public function user(){

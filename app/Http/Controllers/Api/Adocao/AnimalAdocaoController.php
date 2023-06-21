@@ -59,7 +59,6 @@ class AnimalAdocaoController extends Controller
             return response()->json($animal, 201);
         } catch (\Exception $e) {
             DB::rollBack();
-            dd($e->getMessage());
             return response()->json(["message" => $e->getMessage()], 500);
         }
     }

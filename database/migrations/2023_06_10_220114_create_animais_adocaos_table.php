@@ -29,12 +29,13 @@ class CreateAnimaisAdocaosTable extends Migration
             $table->longText("imagem")->nullable();
             $table->string("descricao");
             $table->tinyInteger("status")->default(1);
-            $table->unsignedBigInteger('user_id_interessado')->nullable(true);
+            $table->unsignedBigInteger('user_id_interessado')->nullable(true)->default(null);
             $table->foreign('user_id_interessado')
             	->references('id')
             	->on('users')
             	->onDelete('cascade');
             $table->timestamps();
+            $table->longText("observacao_interessado")->nullable(true)->default(null);
         });
     }
 

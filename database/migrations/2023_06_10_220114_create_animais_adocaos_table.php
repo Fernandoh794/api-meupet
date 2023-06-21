@@ -29,7 +29,7 @@ class CreateAnimaisAdocaosTable extends Migration
             $table->longText("imagem")->nullable();
             $table->string("descricao");
             $table->tinyInteger("status")->default(1);
-            $table->unsignedBigInteger('user_id_interessado');
+            $table->unsignedBigInteger('user_id_interessado')->nullable(true);
             $table->foreign('user_id_interessado')
             	->references('id')
             	->on('users')

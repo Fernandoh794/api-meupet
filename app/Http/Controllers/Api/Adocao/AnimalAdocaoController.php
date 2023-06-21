@@ -26,6 +26,11 @@ class AnimalAdocaoController extends Controller
         if ($request->has('user_id')){
             $animais = $animais->where('user_id', $request->user_id);
         }
+
+        if ($request->has('status')) {
+            $animais = $animais->where('status', $request->status);
+        }
+
         $resouce = AnimalAdocaoResource::collection($animais);
         return response()->json($resouce, 200);
     }

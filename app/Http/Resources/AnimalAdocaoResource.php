@@ -16,6 +16,7 @@ class AnimalAdocaoResource extends JsonResource {
         return [
             "id" => $this->id,
             "usuario" => $this->user->name,
+            "user_id" => $this->user->id,
             'contato' => $this->user->telefone,
             "nome" => $this->nome,
             "raca" => $this->raca,

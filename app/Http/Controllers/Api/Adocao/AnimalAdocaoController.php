@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\Adocao;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\AnimalAdocaoResource;
 use App\Models\AnimaisAdocao;
+use App\Models\User;
 use App\Services\IbgeServices;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
